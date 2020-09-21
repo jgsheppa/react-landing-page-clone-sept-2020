@@ -19,6 +19,7 @@ const headerStyles = css`
   padding: 0 15px;
   height: 72px;
   align-items: center;
+  margin: 0 39px;
 
   img {
     width: 120px;
@@ -52,6 +53,7 @@ const sectionOne = css`
   > div {
     padding: 10% 15px;
     max-width: 545px;
+    margin: 0 0 0 34px;
   }
 
   h1 {
@@ -72,6 +74,7 @@ const sectionTwo = css`
   display: flex;
   flex-direction: row-reverse;
   text-align: left;
+  padding: 0 15px;
 
   > div {
     padding: 10% 15px;
@@ -101,8 +104,10 @@ const sectionThree = css`
   flex-direction: row;
   text-align: left;
   width: 100%;
+  padding: 0 15px;
 
   > div {
+    margin: 0 0 0 34px;
     padding: 10% 15px;
     max-width: 545px;
   }
@@ -127,23 +132,28 @@ const sectionThree = css`
 `;
 
 const sectionFour = css`
+  padding: 0 15px 30px;
   text-align: left;
   width: 100%;
+  padding: 0 15px;
 
   .blogPost {
-    padding: 15px 20px;
+    padding: 0 15px 30px;
   }
   h1 {
     font-size: 36px;
     margin: 0 0 15px;
+    padding-left: 15px;
+    text-decoration: none;
   }
 
   p {
     font-size: 18px;
+    text-decoration: none;
   }
 
   img {
-    max-width: 50%;
+    max-width: 100%;
     height: auto;
     transition: opacity 1s ease;
   }
@@ -154,9 +164,71 @@ const sectionFour = css`
 `;
 
 const blogGrid = css`
-  disply: grid;
+  display: grid;
   grid-template-columns: 1fr 1fr 1fr;
-  grid-template-columns: 100px;
+`;
+
+const innerText = css`
+  padding: 15px 20px;
+`;
+
+const sectionFive = css`
+  display: flex;
+  background-color: #777;
+  height: 282px;
+
+  .sectionFiveText {
+    display: flex;
+    flex-direction: row;
+
+    h1 {
+      margin: 0 0 16px;
+    }
+  }
+
+  input {
+    font-size: 18px;
+  }
+
+  button {
+    background-color: #1d6ff3;
+    color: #fff;
+    box-sizing: border-box;
+    padding: 6.4px 19.2px;
+    border-width: 1px;
+    border-style: solid;
+    border-color: #1d6ff3;
+    font-size: 16px;
+    border-bottom-right-radius: 4px;
+    border-top-right-radius: 4px;
+    border-bottom-left-radius: 0px;
+    border-top-left-radius: 0px;
+  }
+`;
+
+const inputEmailStyle = css`
+  display: flex;
+  height: 123px;
+`;
+
+const footerStyles = css`
+  display: flex;
+  justify-content: center;
+
+  h1 {
+    font-size: 14px;
+    font-weight: bold;
+    margin: 0 0 16px;
+  }
+
+  a {
+    font-size: 15px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: column;
+  }
 `;
 
 function App() {
@@ -216,7 +288,7 @@ function App() {
             <a href="#">
               <div className="blogPost">
                 <img src={interactiveTools} />
-                <div>
+                <div css={innerText}>
                   <h2>The power of interactive tools</h2>
                   <p>
                     Tools augment our problem-solving capacity. We rely on them
@@ -228,7 +300,7 @@ function App() {
             <a href="#">
               <div className="blogPost">
                 <img src={designMockUps} />
-                <div>
+                <div css={innerText}>
                   <h2>The making of Morphocode Explorer</h2>
                   <p>
                     Over the last year, we’ve been working on a new web tool for
@@ -240,7 +312,7 @@ function App() {
             <a href="#">
               <div className="blogPost">
                 <img src={movementPatternsMunich} />
-                <div>
+                <div css={innerText}>
                   <h2>Urban performance measures</h2>
                   <p>
                     Urban performance measures help communities make informed
@@ -252,7 +324,7 @@ function App() {
             <a href="#">
               <div className="blogPost">
                 <img src={fiveMinuteWalk} />
-                <div>
+                <div css={innerText}>
                   <h2>The 5-minute walk</h2>
                   <p>
                     The five-minute walk, also known as the “pedestrian shed” is
@@ -264,7 +336,7 @@ function App() {
             <a href="#">
               <div className="blogPost">
                 <img src={melbournePedestrian} />
-                <div>
+                <div css={innerText}>
                   <h2>Location + time: urban data visualization</h2>
                   <p>
                     The most common ways to visually organize information are
@@ -276,7 +348,7 @@ function App() {
             <a href="#">
               <div className="blogPost">
                 <img src={bestAmericanInfographics} />
-                <div>
+                <div css={innerText}>
                   <h2>Morphocode in the Best American Infographics</h2>
                   <p>
                     We are extremely happy to be included in The Best American
@@ -288,20 +360,22 @@ function App() {
           </div>
         </section>
         <section>
-          <div>
-            <div>
+          <div css={sectionFive}>
+            <div className="sectionFiveText">
               <h1>Start Learning</h1>
               <p>
                 Get the latest articles, tutorials, and free resources from
                 Morphocode
               </p>
             </div>
-            <input placeholder="Enter your email"></input>
-            <button>Subscribe</button>
+            <div css={inputEmailStyle}>
+              <input placeholder="Enter your email"></input>
+              <button>Subscribe</button>
+            </div>
           </div>
         </section>
       </main>
-      <footer>
+      <footer css={footerStyles}>
         <div>
           <h1>ACADEMY</h1>
           <a>Start Learning</a>
@@ -325,7 +399,7 @@ function App() {
           <a>Featured stories</a>
         </div>
         <div>
-          <h1>GET TO KNOW uses</h1>
+          <h1>GET TO KNOW US</h1>
           <a>About</a>
           <a>Contact us</a>
           <div>
