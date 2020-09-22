@@ -15,53 +15,70 @@ import bestAmericanInfographics from './images/the-best-american-infographics-20
 
 const headerStyles = css`
   display: flex;
-  justify-content: space-between;
-  padding: 0 15px;
+  justify-content: space-betwen;
   height: 72px;
   align-items: center;
-  margin: 0 39px;
+  margin: 0 32.5px;
+  padding: 0 15px;
 
   img {
     width: 120px;
     max-height: 15.39px;
   }
-`;
 
-const navStyle = css`
-  display: flex;
-  flex-flow: row-wrap;
-  align-items: center;
-  a {
-    padding: 10px 0px;
-    color: rgba(102, 102, 102, 0.85);
-    font-weight: 500;
-    font-size: 16px;
-    transition: color 0.2s ease;
-    text-decoration: none;
-  }
+  > div {
+    display: flex;
 
-  a:hover {
-    color: #000;
+    a {
+      margin-right: 25px;
+      padding: 10px 0px;
+      color: rgba(102, 102, 102, 0.85);
+      font-weight: 800;
+      font-size: 17px;
+      transition: color 0.2s ease;
+      text-decoration: none;
+    }
+
+    a:hover {
+      color: #000;
+    }
   }
 `;
 
 const sectionOne = css`
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   text-align: left;
+  margin: 0 auto;
 
   > div {
-    padding: 10% 15px;
+    padding: 57.25px 15px;
     max-width: 545px;
-    margin: 0 0 0 34px;
+    margin: 0 0 0 27.5px;
   }
 
   h1 {
+    display: block;
+    margin-block-start: 0.83em;
+    margin-block-end: 0.83em;
     font-size: 48px;
+    letter-spacing: -0.25px;
+    width: 433px;
+    margin: 0 0 24px;
   }
 
   p {
-    font-size: 16px;
+    display: block;
+    margin-block-start: 1em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    font-size: 18px;
+    margin: 0 0 1.3em;
+    max-width: 30em;
+    line-height: 30px;
   }
 
   img {
@@ -73,6 +90,8 @@ const sectionOne = css`
 const sectionTwo = css`
   display: flex;
   flex-direction: row-reverse;
+  justify-content: center;
+  align-items: center;
   text-align: left;
   padding: 0 15px;
 
@@ -83,10 +102,17 @@ const sectionTwo = css`
 
   h1 {
     font-size: 36px;
+    letter-spacing: -0.25px;
+    display: block;
+    width: 433px;
+    margin: 0 0 24px;
   }
 
   p {
     font-size: 18px;
+    margin: 0 0 1.3em;
+    max-width: 30em;
+    line-height: 30px;
   }
 
   img {
@@ -96,12 +122,17 @@ const sectionTwo = css`
 
   a {
     font-size: 16px;
+    color: #1d6ff3;
+    text-decoration: none !important;
   }
 `;
 
 const sectionThree = css`
+  margin: 0;
   display: flex;
   flex-direction: row;
+  justify-content: center;
+  align-items: center;
   text-align: left;
   width: 100%;
   padding: 0 15px;
@@ -121,99 +152,139 @@ const sectionThree = css`
   }
 
   img {
-    max-width: 50%;
+    max-width: 502px;
     height: auto;
     transition: opacity 1s ease;
   }
 
   a {
     font-size: 16px;
+    color: #1d6ff3;
+    text-decoration: none !important;
   }
 `;
 
 const sectionFour = css`
+  display: flex;
+  align-items: center;
   padding: 0 15px 30px;
   text-align: left;
   width: 100%;
   padding: 0 15px;
-
-  .blogPost {
-    padding: 0 15px 30px;
-  }
+  max-width: 985px;
   h1 {
-    font-size: 36px;
-    margin: 0 0 15px;
-    padding-left: 15px;
-    text-decoration: none;
-  }
-
-  p {
-    font-size: 18px;
-    text-decoration: none;
-  }
-
-  img {
-    max-width: 100%;
-    height: auto;
-    transition: opacity 1s ease;
-  }
-
-  a {
     font-size: 16px;
   }
 `;
 
-const blogGrid = css`
-  display: grid;
-  grid-template-columns: 1fr 1fr 1fr;
-`;
+const flexBoxGrid = css`
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  max-height: 350;
+  align-items: center;
+  max-width: 1200px;
 
-const innerText = css`
-  padding: 15px 20px;
+  .blogPost {
+    display: flex;
+    padding: 0 15px 30px;
+    background-color: #fff;
+  }
+
+  .blogText {
+    max-width: 215px;
+  }
+
+  .col {
+    flex: 1;
+  }
+
+  h2 {
+    font-size: 24px;
+  }
+
+  p {
+    font-size: 18px;
+    line-height: 1.6;
+  }
+
+  img {
+    max-width: 100%;
+    max-height: auto;
+    display: block;
+  }
+
+  a {
+    color: #4a4a4a;
+    font-size: 16px;
+    text-decoration: none !important;
+  }
 `;
 
 const sectionFive = css`
+  margin: 0;
   display: flex;
-  background-color: #777;
+  justify-content: space-around;
+  align-items: center;
+  background-color: rgb(238, 238, 238);
   height: 282px;
+  max-width: 1500px;
 
-  .sectionFiveText {
+  .sectionFiveTextLeft {
     display: flex;
-    flex-direction: row;
+    flex-direction: column;
+    padding: 50px 15px 30px;
 
     h1 {
       margin: 0 0 16px;
+      font-size: 36px;
+    }
+
+    p {
+      font-size: 18px;
+      padding: 0 0 18px;
     }
   }
+`;
+
+const inputEmailStyle = css`
+  display: flex;
+  align-items: center;
+  justify-content: space-evenly;
+  height: 40px;
+  padding: 0 15px 30px;
 
   input {
     font-size: 18px;
+    border-radius: 4px;
+    border-top-right-radius: 0px;
+    border-bottom-right-radius: 0px;
+    border: 1px solid #979797;
+    box-shadow: none;
+    padding: 0.4em 0.7em;
   }
 
   button {
     background-color: #1d6ff3;
     color: #fff;
     box-sizing: border-box;
-    padding: 6.4px 19.2px;
-    border-width: 1px;
-    border-style: solid;
-    border-color: #1d6ff3;
+    padding: 0.4em 1.2em;
+    border-color: 0px solid #979797;
     font-size: 16px;
+    height: 42px;
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px;
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
+    box-shadow: none;
   }
-`;
-
-const inputEmailStyle = css`
-  display: flex;
-  height: 123px;
 `;
 
 const footerStyles = css`
   display: flex;
-  justify-content: center;
+  justify-content: space-around;
+  flex-basis: 25%;
+  padding: 50px 30px 125px;
 
   h1 {
     font-size: 14px;
@@ -231,13 +302,40 @@ const footerStyles = css`
   }
 `;
 
+const footerInfoStyles = css`
+  display: flex;
+  padding: 0px 15px 30px;
+  width: 221px;
+
+  > h1 {
+    margin: 0px 0px 16px;
+    opacity: 0.8;
+  }
+
+  a {
+    font-size: 0.9375rem;
+    color: #637280;
+    padding: 4px 0px;
+    line-height: 2;
+    letter-spacing: -0.25px;
+  }
+`;
+
+const divider = css`
+  margin-top: 0.5em;
+  margin-bottom: 0.5em;
+  height: 2px;
+  background-color: rgba(0, 0, 0, 0.1);
+  max-width: 30px;
+`;
+
 function App() {
   return (
     <>
       <header>
         <div css={headerStyles}>
-          <img src={morphocodeLogo} />
-          <div css={navStyle}>
+          <img src={morphocodeLogo} alt="Morphocode logo" />
+          <div>
             <a href="#a">Academy</a>
             <a href="#a">Blog</a>
             <a href="#a">Work</a>
@@ -284,84 +382,106 @@ function App() {
         </section>
         <section css={sectionFour}>
           <h1>From the blog</h1>
-          <div css={blogGrid}>
-            <a href="#">
-              <div className="blogPost">
-                <img src={interactiveTools} />
-                <div css={innerText}>
-                  <h2>The power of interactive tools</h2>
-                  <p>
-                    Tools augment our problem-solving capacity. We rely on them
-                    to expand our minds and provide ease, accuracy, and [...]
-                  </p>
-                </div>
+          <div css={flexBoxGrid}>
+            <div>
+              <div className="col">
+                <a href="#">
+                  <img src={interactiveTools} />
+                  <div className="blogPost">
+                    <div className="blogText">
+                      <h2>The power of interactive tools</h2>
+                      <div css={divider}></div>
+                      <p>
+                        Tools augment our problem-solving capacity. We rely on
+                        them to expand our minds and provide ease, accuracy, and
+                        [...]
+                      </p>
+                    </div>
+                  </div>
+                </a>
               </div>
-            </a>
-            <a href="#">
-              <div className="blogPost">
+            </div>
+            <div className="col">
+              <a href="#">
                 <img src={designMockUps} />
-                <div css={innerText}>
-                  <h2>The making of Morphocode Explorer</h2>
-                  <p>
-                    Over the last year, we’ve been working on a new web tool for
-                    interactive data exploration [...]
-                  </p>
+                <div className="blogPost">
+                  <div>
+                    <h2>The making of Morphocode Explorer</h2>
+                    <div css={divider}></div>
+                    <p>
+                      Over the last year, we’ve been working on a new web tool
+                      for interactive data exploration [...]
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </a>
-            <a href="#">
-              <div className="blogPost">
+              </a>
+            </div>
+            <div className="col">
+              <a href="#">
                 <img src={movementPatternsMunich} />
-                <div css={innerText}>
-                  <h2>Urban performance measures</h2>
-                  <p>
-                    Urban performance measures help communities make informed
-                    decisions and measure results against goals. [...]
-                  </p>
+                <div className="blogPost">
+                  <div>
+                    <h2>Urban performance measures</h2>
+                    <div css={divider}></div>
+                    <p>
+                      Urban performance measures help communities make informed
+                      decisions and measure results against goals. [...]
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </a>
-            <a href="#">
-              <div className="blogPost">
+              </a>
+            </div>
+            <div className="col">
+              <a href="#">
                 <img src={fiveMinuteWalk} />
-                <div css={innerText}>
-                  <h2>The 5-minute walk</h2>
-                  <p>
-                    The five-minute walk, also known as the “pedestrian shed” is
-                    considered to be the distance people are willing [...]
-                  </p>
+                <div className="blogPost">
+                  <div>
+                    <h2>The 5-minute walk</h2>
+                    <div css={divider}></div>
+                    <p>
+                      The five-minute walk, also known as the “pedestrian shed”
+                      is considered to be the distance people are willing [...]
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </a>
-            <a href="#">
-              <div className="blogPost">
+              </a>
+            </div>
+            <div className="col">
+              <a href="#">
                 <img src={melbournePedestrian} />
-                <div css={innerText}>
-                  <h2>Location + time: urban data visualization</h2>
-                  <p>
-                    The most common ways to visually organize information are
-                    based on location and time. In this interactive story, [...]
-                  </p>
+                <div className="blogPost">
+                  <div>
+                    <h2>Location + time: urban data visualization</h2>
+                    <div css={divider}></div>
+                    <p>
+                      The most common ways to visually organize information are
+                      based on location and time. In this interactive story,
+                      [...]
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </a>
-            <a href="#">
-              <div className="blogPost">
+              </a>
+            </div>
+            <div className="col">
+              <a href="#">
                 <img src={bestAmericanInfographics} />
-                <div css={innerText}>
-                  <h2>Morphocode in the Best American Infographics</h2>
-                  <p>
-                    We are extremely happy to be included in The Best American
-                    Infographics. The third volume in the series [...]
-                  </p>
+                <div className="blogPost">
+                  <div>
+                    <h2>Morphocode in the Best American Infographics</h2>
+                    <div css={divider}></div>
+                    <p>
+                      We are extremely happy to be included in The Best American
+                      Infographics. The third volume in the series [...]
+                    </p>
+                  </div>
                 </div>
-              </div>
-            </a>
+              </a>
+            </div>
           </div>
         </section>
         <section>
           <div css={sectionFive}>
-            <div className="sectionFiveText">
+            <div className="sectionFiveTextLeft">
               <h1>Start Learning</h1>
               <p>
                 Get the latest articles, tutorials, and free resources from
@@ -376,20 +496,20 @@ function App() {
         </section>
       </main>
       <footer css={footerStyles}>
-        <div>
+        <div css={footerInfoStyles}>
           <h1>ACADEMY</h1>
           <a>Start Learning</a>
           <a>Mapping Urban Data</a>
           <a>Getting started with Rabbit</a>
         </div>
-        <div>
+        <div css={footerInfoStyles}>
           <h1>WORKS</h1>
           <a>Urban layers</a>
           <a>Rabbit</a>
           <a>The heritage of Sofia</a>
           <a>The pulse of Melbourne</a>
         </div>
-        <div>
+        <div css={footerInfoStyles}>
           <h1>FROM THE BLOG</h1>
           <a>The use of color in maps</a>
           <a>Global trends of urbanization</a>
@@ -398,10 +518,11 @@ function App() {
           <a>Inspiration</a>
           <a>Featured stories</a>
         </div>
-        <div>
+        <div css={footerInfoStyles}>
           <h1>GET TO KNOW US</h1>
           <a>About</a>
           <a>Contact us</a>
+          <div css={divider}></div>
           <div>
             <a>
               <img />

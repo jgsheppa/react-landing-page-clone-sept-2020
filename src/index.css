@@ -1,10 +1,8 @@
 body {
   margin: 0;
   scroll-behavior: smooth;
-  font-family: sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  max-width: 972;
+  font-family: Roboto, 'Helvetica Neue', sans-serif;
+  text-decoration: none;
 }
 
 h1 {
@@ -13,6 +11,10 @@ h1 {
 
 p {
   color: #434a54;
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-weight: 400px;
+  font-size: 18px;
+  line-height: 1.6;
 }
 
 code {
