@@ -2,6 +2,7 @@
 import { jsx, css } from '@emotion/core';
 /** @jsxFrag React.Fragment */
 import React from 'react';
+import { Helmet } from 'react-helmet';
 import morphocodeLogo from './images/morphocode-logo.png';
 import exploringCities from './images/morphocode-exploring-cities.png';
 import illustrationWork from './images/morphocode-illustration-workflow.png';
@@ -183,7 +184,7 @@ const flexBoxGrid = css`
   flex-direction: row;
   max-height: 350;
   align-items: center;
-  max-width: 1200px;
+  max-width: 750px;
 
   .blogPost {
     display: flex;
@@ -196,7 +197,7 @@ const flexBoxGrid = css`
   }
 
   .col {
-    flex: 1;
+    flex: 1 50px;
   }
 
   h2 {
@@ -209,9 +210,8 @@ const flexBoxGrid = css`
   }
 
   img {
-    max-width: 100%;
-    max-height: auto;
-    display: block;
+    max-width: 200px;
+    max-height: 350px;
   }
 
   a {
@@ -296,7 +296,7 @@ const footerStyles = css`
     font-size: 15px;
   }
 
-  div {
+  > div {
     display: flex;
     flex-direction: column;
   }
@@ -321,6 +321,32 @@ const footerInfoStyles = css`
   }
 `;
 
+const socialMediaStyles = css`
+  display: flex;
+  flex-direction: row;
+  max-width: 100px;
+
+  a {
+    text-decoration: none !important;
+    padding: 0;
+    color: #1f8ceb;
+    width: 19px;
+    height: 19px;
+    margin: 0 16px 0 0;
+    opacity: 1;
+  }
+
+  .fa::before {
+    width: 19px;
+    height: 19px;
+  }
+
+  .fa:hover {
+    transition: color 0.3s, opacity 0.3s, transform 0.3s;
+    color: #1d6ff3;
+  }
+`;
+
 const divider = css`
   margin-top: 0.5em;
   margin-bottom: 0.5em;
@@ -332,6 +358,12 @@ const divider = css`
 function App() {
   return (
     <>
+      <Helmet>
+        <link
+          rel="stylesheet"
+          href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css"
+        ></link>
+      </Helmet>
       <header>
         <div css={headerStyles}>
           <img src={morphocodeLogo} alt="Morphocode logo" />
@@ -523,16 +555,10 @@ function App() {
           <a>About</a>
           <a>Contact us</a>
           <div css={divider}></div>
-          <div>
-            <a>
-              <img />
-            </a>
-            <a>
-              <img />
-            </a>
-            <a>
-              <img />
-            </a>
+          <div css={socialMediaStyles}>
+            <a href="#" class="fa fa-facebook"></a>
+            <a href="#" class="fa fa-twitter"></a>
+            <a href="#" class="fa fa-linkedin"></a>
           </div>
         </div>
       </footer>
