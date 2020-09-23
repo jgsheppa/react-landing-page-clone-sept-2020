@@ -396,13 +396,15 @@ function App() {
       </Helmet>
       <header>
         <div css={headerStyles}>
-          <img src={morphocodeLogo} alt="Morphocode logo" />
+          <a href="https://morphocode.com/">
+            <img src={morphocodeLogo} alt="Morphocode logo" />
+          </a>
           <div>
-            <a href="#a">Academy</a>
-            <a href="#a">Blog</a>
-            <a href="#a">Work</a>
-            <a href="#a">Contact</a>
-            <a href="#a">About</a>
+            <a href="https://morphocode.com/academy/">Academy</a>
+            <a href="https://morphocode.com/blog/">Blog</a>
+            <a href="https://morphocode.com/work/">Work</a>
+            <a href="https://morphocode.com/contact/">Contact</a>
+            <a href="https://morphocode.com/about/">About</a>
           </div>
         </div>
       </header>
@@ -429,7 +431,7 @@ function App() {
               graphics to custom software tools for data analysis and
               visualization.
             </p>
-            <a href="#a">View Projects</a>
+            <a href="https://morphocode.com/work/">View Projects</a>
           </div>
           <img
             src={illustrationWork}
@@ -443,7 +445,7 @@ function App() {
               Morphocode Academy is an online school that covers topics in data
               visualization, creative coding, and urban informatics.
             </p>
-            <a href="#a">Start Learning</a>
+            <a href="https://morphocode.com/academy/">Start Learning</a>
           </div>
           <img
             src={illustrationAcademy}
@@ -456,7 +458,7 @@ function App() {
             <div css={flexBoxGrid}>
               <div>
                 <div className="col">
-                  <a href="#a">
+                  <a href="https://morphocode.com/the-power-of-interactive-tools/">
                     <img
                       src={interactiveTools}
                       alt="Abstraction of interactive tools"
@@ -476,7 +478,7 @@ function App() {
                 </div>
               </div>
               <div className="col">
-                <a href="#a">
+                <a href="https://morphocode.com/the-making-of-morphocode-explorer/">
                   <img src={designMockUps} alt="Graphs and pie charts " />
                   <div className="blogPost">
                     <div className="blogText">
@@ -491,7 +493,7 @@ function App() {
                 </a>
               </div>
               <div className="col">
-                <a href="#a">
+                <a href="https://morphocode.com/urban-performance-measures/">
                   <img
                     src={movementPatternsMunich}
                     alt="City plan with strong red lines, similar to veins "
@@ -513,7 +515,7 @@ function App() {
 
             <div css={flexBoxGrid}>
               <div className="col">
-                <a href="#a">
+                <a href="https://morphocode.com/the-5-minute-walk/">
                   <img src={fiveMinuteWalk} alt="Radius with distances " />
                   <div className="blogPost">
                     <div className="blogText">
@@ -529,7 +531,7 @@ function App() {
                 </a>
               </div>
               <div className="col">
-                <a href="#a">
+                <a href="https://morphocode.com/location-time-urban-data-visualization/">
                   <img
                     src={melbournePedestrian}
                     alt="Blue technical waves with peaks and valleys"
@@ -548,7 +550,7 @@ function App() {
                 </a>
               </div>
               <div className="col">
-                <a href="#a">
+                <a href="https://morphocode.com/morphocode-best-american-infographics-2015/">
                   <img
                     src={bestAmericanInfographics}
                     alt="Booklet of the Best American Infographics"
@@ -614,13 +616,13 @@ function App() {
           <a>Contact us</a>
           <div css={divider}></div>
           <div css={socialMediaStyles}>
-            <a href="#a">
+            <a href="https://www.facebook.com/morphocode">
               <div class="fa fa-facebook"></div>
             </a>
-            <a href="#a">
+            <a href="https://twitter.com/morphocode">
               <div class="fa fa-twitter"></div>
             </a>
-            <a href="#a">
+            <a href="https://linkedin.com/company/morphocode/">
               <div class="fa fa-linkedin"></div>
             </a>
           </div>
