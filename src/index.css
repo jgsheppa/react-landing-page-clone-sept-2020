@@ -1,4 +1,7 @@
 body {
+  display: flex;
+  align-items: center;
+  justify-content: center;
   margin: 0;
   scroll-behavior: smooth;
   font-family: Roboto, 'Helvetica Neue', sans-serif;
@@ -7,6 +10,7 @@ body {
 
 h1 {
   color: #4a4a4a;
+  letter-spacing: 0.25px;
 }
 
 p {
@@ -15,6 +19,7 @@ p {
   font-weight: 400px;
   font-size: 18px;
   line-height: 1.6;
+  letter-spacing: 0.4px;
 }
 
 code {

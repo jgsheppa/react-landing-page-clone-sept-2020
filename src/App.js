@@ -16,11 +16,12 @@ import bestAmericanInfographics from './images/the-best-american-infographics-20
 
 const headerStyles = css`
   display: flex;
-  justify-content: space-betwen;
-  height: 72px;
+  justify-content: space-between;
   align-items: center;
-  margin: 0 32.5px;
+  height: 72px;
+  max-width: 1440px;
   padding: 0 15px;
+  margin: 0 180px;
 
   img {
     width: 120px;
@@ -29,6 +30,7 @@ const headerStyles = css`
 
   > div {
     display: flex;
+    max-width: 1080px;
 
     a {
       margin-right: 25px;
@@ -47,26 +49,23 @@ const headerStyles = css`
 `;
 
 const sectionOne = css`
+  margin: 0;
   display: flex;
   flex-direction: row;
   justify-content: center;
   align-items: center;
   text-align: left;
-  margin: 0 auto;
-
-  > div {
-    padding: 57.25px 15px;
-    max-width: 545px;
-    margin: 0 0 0 27.5px;
-  }
+  max-width: 1440px;
+  max-height: 600px;
+  padding: 57.25px 15px;
+  margin: 0 auto 0 175px;
 
   h1 {
     display: block;
     margin-block-start: 0.83em;
     margin-block-end: 0.83em;
     font-size: 48px;
-    letter-spacing: -0.25px;
-    width: 433px;
+    width: 100%;
     margin: 0 0 24px;
   }
 
@@ -83,18 +82,26 @@ const sectionOne = css`
   }
 
   img {
-    max-width: 502px;
-    max-height: 502px;
+    max-width: 600px;
+    max-height: 100%;
   }
 `;
 
+const imgStyles = css`
+  max-width: 720px;
+  max-height: 600px;
+`;
+
 const sectionTwo = css`
+  margin: 0;
   display: flex;
   flex-direction: row-reverse;
   justify-content: center;
   align-items: center;
   text-align: left;
   padding: 0 15px;
+  max-width: 1440px;
+  max-height: 600px;
 
   > div {
     padding: 10% 15px;
@@ -103,9 +110,8 @@ const sectionTwo = css`
 
   h1 {
     font-size: 36px;
-    letter-spacing: -0.25px;
     display: block;
-    width: 433px;
+    width: 100%;
     margin: 0 0 24px;
   }
 
@@ -117,8 +123,8 @@ const sectionTwo = css`
   }
 
   img {
-    max-width: 492px;
-    height: auto;
+    max-width: 600px;
+    max-height: 600px;
   }
 
   a {
@@ -146,6 +152,7 @@ const sectionThree = css`
 
   h1 {
     font-size: 36px;
+    width: 100%;
   }
 
   p {
@@ -153,8 +160,8 @@ const sectionThree = css`
   }
 
   img {
-    max-width: 502px;
-    height: auto;
+    max-width: 600px;
+    max-height: 600px;
     transition: opacity 1s ease;
   }
 
@@ -168,40 +175,58 @@ const sectionThree = css`
 const sectionFour = css`
   display: flex;
   align-items: center;
+  justify-content: center;
   padding: 0 15px 30px;
-  text-align: left;
   width: 100%;
   padding: 0 15px;
-  max-width: 985px;
+  max-width: 1440px;
+  margin-bottom: 100px;
+
   h1 {
-    font-size: 16px;
+    font-size: 24px;
+    margin: 0 0 12px;
+    padding-left: 15px;
   }
 `;
 
+const flexBoxGridContainer = css`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  max-width: 1080px;
+`;
 const flexBoxGrid = css`
   display: flex;
-  flex-wrap: wrap;
   flex-direction: row;
-  max-height: 350;
-  align-items: center;
-  max-width: 750px;
+  justify-content: space-around;
+  max-width: 1080px;
 
   .blogPost {
     display: flex;
+    justify-content: center;
     padding: 0 15px 30px;
     background-color: #fff;
+    max-width: 100%;
+    position: relative;
+    background-color: rgb(255, 255, 255, 0);
   }
 
   .blogText {
-    max-width: 215px;
+    max-width: 100%;
+    height: 205px;
+    background-color: rgb(255, 255, 255, 0.95);
+    padding: 15px 20px;
+    box-sizing: border-box;
   }
 
   .col {
-    flex: 1 50px;
+    width: 100%;
+    padding: 0 15px 30px;
   }
 
   h2 {
     font-size: 24px;
+    margin: 0;
   }
 
   p {
@@ -210,8 +235,9 @@ const flexBoxGrid = css`
   }
 
   img {
-    max-width: 200px;
-    max-height: 350px;
+    max-width: 100%;
+    max-height: auto;
+    margin-bottom: -75px;
   }
 
   a {
@@ -261,22 +287,27 @@ const inputEmailStyle = css`
     border-bottom-right-radius: 0px;
     border: 1px solid #979797;
     box-shadow: none;
-    padding: 0.4em 0.7em;
+    padding: 0.5em 0.7em;
+    width: 296px;
   }
 
   button {
     background-color: #1d6ff3;
     color: #fff;
     box-sizing: border-box;
-    padding: 0.4em 1.2em;
-    border-color: 0px solid #979797;
+    padding: 0.2em 1.2em;
+    border-color: 1px solid #979797;
     font-size: 16px;
+    font-weight: 400px;
     height: 42px;
     border-bottom-right-radius: 4px;
     border-top-right-radius: 4px;
     border-bottom-left-radius: 0px;
     border-top-left-radius: 0px;
     box-shadow: none;
+    letter-spacing: 0.04em;
+    transition: color, background 0.2s;
+    cursor: pointer;
   }
 `;
 
@@ -327,18 +358,16 @@ const socialMediaStyles = css`
   max-width: 100px;
 
   a {
-    text-decoration: none !important;
-    padding: 0;
-    color: #1f8ceb;
-    width: 19px;
-    height: 19px;
     margin: 0 16px 0 0;
-    opacity: 1;
-  }
 
-  .fa::before {
-    width: 19px;
-    height: 19px;
+    > div {
+      text-decoration: none !important;
+      padding: 0;
+      color: #1f8ceb;
+      opacity: 1;
+      min-width: 19px;
+      min-height: 19px;
+    }
   }
 
   .fa:hover {
@@ -387,7 +416,9 @@ function App() {
               software engineering.
             </p>
           </div>
-          <img src={exploringCities} />
+          <div css={imgStyles}>
+            <img src={exploringCities} />
+          </div>
         </section>
         <section css={sectionTwo}>
           <div>
@@ -413,19 +444,52 @@ function App() {
           <img src={illustrationAcademy} />
         </section>
         <section css={sectionFour}>
-          <h1>From the blog</h1>
-          <div css={flexBoxGrid}>
-            <div>
+          <div css={flexBoxGridContainer}>
+            <h1>From the blog</h1>
+            <div css={flexBoxGrid}>
+              <div>
+                <div className="col">
+                  <a href="#">
+                    <img src={interactiveTools} />
+                    <div className="blogPost">
+                      <div className="blogText">
+                        <h2>The power of interactive tools</h2>
+                        <div css={divider}></div>
+                        <p>
+                          Tools augment our problem-solving capacity. We rely on
+                          them to expand our minds and provide ease, accuracy,
+                          and [...]
+                        </p>
+                      </div>
+                    </div>
+                  </a>
+                </div>
+              </div>
               <div className="col">
                 <a href="#">
-                  <img src={interactiveTools} />
+                  <img src={designMockUps} />
                   <div className="blogPost">
                     <div className="blogText">
-                      <h2>The power of interactive tools</h2>
+                      <h2>The making of Morphocode Explorer</h2>
                       <div css={divider}></div>
                       <p>
-                        Tools augment our problem-solving capacity. We rely on
-                        them to expand our minds and provide ease, accuracy, and
+                        Over the last year, we’ve been working on a new web tool
+                        for interactive data exploration [...]
+                      </p>
+                    </div>
+                  </div>
+                </a>
+              </div>
+              <div className="col">
+                <a href="#">
+                  <img src={movementPatternsMunich} />
+                  <div className="blogPost">
+                    <div className="blogText">
+                      <h2>Urban performance measures</h2>
+                      <div css={divider}></div>
+                      <p>
+                        Urban performance measures help communities make
+                        informed decisions and measure results against goals.
                         [...]
                       </p>
                     </div>
@@ -433,81 +497,56 @@ function App() {
                 </a>
               </div>
             </div>
-            <div className="col">
-              <a href="#">
-                <img src={designMockUps} />
-                <div className="blogPost">
-                  <div>
-                    <h2>The making of Morphocode Explorer</h2>
-                    <div css={divider}></div>
-                    <p>
-                      Over the last year, we’ve been working on a new web tool
-                      for interactive data exploration [...]
-                    </p>
+
+            <div css={flexBoxGrid}>
+              <div className="col">
+                <a href="#">
+                  <img src={fiveMinuteWalk} />
+                  <div className="blogPost">
+                    <div className="blogText">
+                      <h2>The 5-minute walk</h2>
+                      <div css={divider}></div>
+                      <p>
+                        The five-minute walk, also known as the “pedestrian
+                        shed” is considered to be the distance people are
+                        willing [...]
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </div>
-            <div className="col">
-              <a href="#">
-                <img src={movementPatternsMunich} />
-                <div className="blogPost">
-                  <div>
-                    <h2>Urban performance measures</h2>
-                    <div css={divider}></div>
-                    <p>
-                      Urban performance measures help communities make informed
-                      decisions and measure results against goals. [...]
-                    </p>
+                </a>
+              </div>
+              <div className="col">
+                <a href="#">
+                  <img src={melbournePedestrian} />
+                  <div className="blogPost">
+                    <div className="blogText">
+                      <h2>Location + time: urban data visualization</h2>
+                      <div css={divider}></div>
+                      <p>
+                        The most common ways to visually organize information
+                        are based on location and time. In this interactive
+                        story, [...]
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </div>
-            <div className="col">
-              <a href="#">
-                <img src={fiveMinuteWalk} />
-                <div className="blogPost">
-                  <div>
-                    <h2>The 5-minute walk</h2>
-                    <div css={divider}></div>
-                    <p>
-                      The five-minute walk, also known as the “pedestrian shed”
-                      is considered to be the distance people are willing [...]
-                    </p>
+                </a>
+              </div>
+              <div className="col">
+                <a href="#">
+                  <img src={bestAmericanInfographics} />
+                  <div className="blogPost">
+                    <div className="blogText">
+                      <h2>Morphocode in the Best American Infographics</h2>
+                      <div css={divider}></div>
+                      <p>
+                        We are extremely happy to be included in The Best
+                        American Infographics. The third volume in the series
+                        [...]
+                      </p>
+                    </div>
                   </div>
-                </div>
-              </a>
-            </div>
-            <div className="col">
-              <a href="#">
-                <img src={melbournePedestrian} />
-                <div className="blogPost">
-                  <div>
-                    <h2>Location + time: urban data visualization</h2>
-                    <div css={divider}></div>
-                    <p>
-                      The most common ways to visually organize information are
-                      based on location and time. In this interactive story,
-                      [...]
-                    </p>
-                  </div>
-                </div>
-              </a>
-            </div>
-            <div className="col">
-              <a href="#">
-                <img src={bestAmericanInfographics} />
-                <div className="blogPost">
-                  <div>
-                    <h2>Morphocode in the Best American Infographics</h2>
-                    <div css={divider}></div>
-                    <p>
-                      We are extremely happy to be included in The Best American
-                      Infographics. The third volume in the series [...]
-                    </p>
-                  </div>
-                </div>
-              </a>
+                </a>
+              </div>
             </div>
           </div>
         </section>
@@ -556,9 +595,15 @@ function App() {
           <a>Contact us</a>
           <div css={divider}></div>
           <div css={socialMediaStyles}>
-            <a href="#" class="fa fa-facebook"></a>
-            <a href="#" class="fa fa-twitter"></a>
-            <a href="#" class="fa fa-linkedin"></a>
+            <a href="#">
+              <div class="fa fa-facebook"></div>
+            </a>
+            <a href="#">
+              <div class="fa fa-twitter"></div>
+            </a>
+            <a href="#">
+              <div class="fa fa-linkedin"></div>
+            </a>
           </div>
         </div>
       </footer>
