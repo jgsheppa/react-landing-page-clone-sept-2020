@@ -590,30 +590,32 @@ function App() {
       <footer css={footerStyles}>
         <div css={footerInfoStyles}>
           <h1>ACADEMY</h1>
-          <a>Start Learning</a>
-          <a>Mapping Urban Data</a>
-          <a>Getting started with Rabbit</a>
+          <a href="https://morphocode.com">Start Learning</a>
+          <a href="https://morphocode.com">Mapping Urban Data</a>
+          <a href="https://morphocode.com">Getting started with Rabbit</a>
         </div>
         <div css={footerInfoStyles}>
           <h1>WORKS</h1>
-          <a>Urban layers</a>
-          <a>Rabbit</a>
-          <a>The heritage of Sofia</a>
-          <a>The pulse of Melbourne</a>
+          <a href="https://morphocode.com">Urban layers</a>
+          <a href="https://morphocode.com">Rabbit</a>
+          <a href="https://morphocode.com">The heritage of Sofia</a>
+          <a href="https://morphocode.com">The pulse of Melbourne</a>
         </div>
         <div css={footerInfoStyles}>
           <h1>FROM THE BLOG</h1>
-          <a>The use of color in maps</a>
-          <a>Global trends of urbanization</a>
-          <a>Small multiples</a>
-          <a>Morphocode in the best american infographics</a>
-          <a>Inspiration</a>
-          <a>Featured stories</a>
+          <a href="https://morphocode.com">The use of color in maps</a>
+          <a href="https://morphocode.com">Global trends of urbanization</a>
+          <a href="https://morphocode.com">Small multiples</a>
+          <a href="https://morphocode.com">
+            Morphocode in the best american infographics
+          </a>
+          <a href="https://morphocode.com">Inspiration</a>
+          <a href="https://morphocode.com">Featured stories</a>
         </div>
         <div css={footerInfoStyles}>
           <h1>GET TO KNOW US</h1>
-          <a>About</a>
-          <a>Contact us</a>
+          <a href="https://morphocode.com">About</a>
+          <a href="https://morphocode.com">Contact us</a>
           <div css={divider}></div>
           <div css={socialMediaStyles}>
             <a href="https://www.facebook.com/morphocode">
