@@ -1,7 +1,8 @@
 /** @jsx jsx */
-import { jsx, css } from '@emotion/core';
 /** @jsxFrag React.Fragment */
+/*eslint-disable no-unused-vars*/
 import React from 'react';
+import { jsx, css } from '@emotion/core';
 import { Helmet } from 'react-helmet';
 import morphocodeLogo from './images/morphocode-logo.png';
 import exploringCities from './images/morphocode-exploring-cities.png';
@@ -417,7 +418,7 @@ function App() {
             </p>
           </div>
           <div css={imgStyles}>
-            <img src={exploringCities} />
+            <img src={exploringCities} alt="Artistic rendering of city plan" />
           </div>
         </section>
         <section css={sectionTwo}>
@@ -430,7 +431,10 @@ function App() {
             </p>
             <a href="#a">View Projects</a>
           </div>
-          <img src={illustrationWork} />
+          <img
+            src={illustrationWork}
+            alt="Abstract representation of research"
+          />
         </section>
         <section css={sectionThree}>
           <div>
@@ -441,7 +445,10 @@ function App() {
             </p>
             <a href="#a">Start Learning</a>
           </div>
-          <img src={illustrationAcademy} />
+          <img
+            src={illustrationAcademy}
+            alt="Abstract representation of the idea of learning"
+          />
         </section>
         <section css={sectionFour}>
           <div css={flexBoxGridContainer}>
@@ -449,8 +456,11 @@ function App() {
             <div css={flexBoxGrid}>
               <div>
                 <div className="col">
-                  <a href="#">
-                    <img src={interactiveTools} />
+                  <a href="#a">
+                    <img
+                      src={interactiveTools}
+                      alt="Abstraction of interactive tools"
+                    />
                     <div className="blogPost">
                       <div className="blogText">
                         <h2>The power of interactive tools</h2>
@@ -466,8 +476,8 @@ function App() {
                 </div>
               </div>
               <div className="col">
-                <a href="#">
-                  <img src={designMockUps} />
+                <a href="#a">
+                  <img src={designMockUps} alt="Graphs and pie charts " />
                   <div className="blogPost">
                     <div className="blogText">
                       <h2>The making of Morphocode Explorer</h2>
@@ -481,8 +491,11 @@ function App() {
                 </a>
               </div>
               <div className="col">
-                <a href="#">
-                  <img src={movementPatternsMunich} />
+                <a href="#a">
+                  <img
+                    src={movementPatternsMunich}
+                    alt="City plan with strong red lines, similar to veins "
+                  />
                   <div className="blogPost">
                     <div className="blogText">
                       <h2>Urban performance measures</h2>
@@ -500,8 +513,8 @@ function App() {
 
             <div css={flexBoxGrid}>
               <div className="col">
-                <a href="#">
-                  <img src={fiveMinuteWalk} />
+                <a href="#a">
+                  <img src={fiveMinuteWalk} alt="Radius with distances " />
                   <div className="blogPost">
                     <div className="blogText">
                       <h2>The 5-minute walk</h2>
@@ -516,8 +529,11 @@ function App() {
                 </a>
               </div>
               <div className="col">
-                <a href="#">
-                  <img src={melbournePedestrian} />
+                <a href="#a">
+                  <img
+                    src={melbournePedestrian}
+                    alt="Blue technical waves with peaks and valleys"
+                  />
                   <div className="blogPost">
                     <div className="blogText">
                       <h2>Location + time: urban data visualization</h2>
@@ -532,8 +548,11 @@ function App() {
                 </a>
               </div>
               <div className="col">
-                <a href="#">
-                  <img src={bestAmericanInfographics} />
+                <a href="#a">
+                  <img
+                    src={bestAmericanInfographics}
+                    alt="Booklet of the Best American Infographics"
+                  />
                   <div className="blogPost">
                     <div className="blogText">
                       <h2>Morphocode in the Best American Infographics</h2>
@@ -595,13 +614,13 @@ function App() {
           <a>Contact us</a>
           <div css={divider}></div>
           <div css={socialMediaStyles}>
-            <a href="#">
+            <a href="#a">
               <div class="fa fa-facebook"></div>
             </a>
-            <a href="#">
+            <a href="#a">
               <div class="fa fa-twitter"></div>
             </a>
-            <a href="#">
+            <a href="#a">
               <div class="fa fa-linkedin"></div>
             </a>
           </div>
