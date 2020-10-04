@@ -350,6 +350,7 @@ const footerInfoStyles = css`
     padding: 4px 0px;
     line-height: 2;
     letter-spacing: -0.25px;
+    text-decoration: none;
   }
 `;
 
