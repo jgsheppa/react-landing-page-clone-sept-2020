@@ -1,6 +1,6 @@
 /** @jsx jsx */
 /** @jsxFrag React.Fragment */
-/*eslint-disable no-unused-vars*/
+// eslint-disable-next-line no-unused-vars
 import React from 'react';
 import { jsx, css } from '@emotion/core';
 import { Helmet } from 'react-helmet';
